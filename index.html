@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palio dei Normanni - Piazza Armerina</title>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+
+.curiosita, .quartieri, .info-turistiche {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.curiosita h2,
+.quartieri h2,
+.info-turistiche h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.curiosita ul,
+.quartieri ul,
+.info-turistiche ul {
+    list-style: disc inside;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+.curiosita ul li,
+.quartieri ul li,
+.info-turistiche ul li {
+    margin-bottom: 10px;
+}
+
+.quartieri p,
+.info-turistiche p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+
+@media screen and (max-width: 768px) {
+    .curiosita, .quartieri, .info-turistiche {
+        padding: 30px 15px;
+    }
+
+    .curiosita h2,
+    .quartieri h2,
+    .info-turistiche h2 {
+        font-size: 1.6em;
+    }
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../images/logo.png" alt="Palio dei Normanni" >
+                </a>
+                
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="../galleria.html">Galleria</a></li>
+                    <li class="dropdown active">
+                        <a href="monte.html">Quartieri</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../monte.html">Monte mira</a></li>
+                            <li><a href="../casalotto.html">Casalotto</a></li>
+                            <li><a href="../canali.html">Canali</a></li>
+                            <li><a href="../castellina.html">Castellina</a></li>
+                        </ul>
+                    </li> 
+                    <li><a href="../registrazione.html">Registrazione</a></li>
+                    <li><a href="../contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-slider">     
+            <div class="slide active" style="background-image: url('images/hero-corteo.jpg')">
+                <div class="slide-inner">
+                    <div class="slide-content">
+                        <h2>70° Edizione del Palio dei Normanni</h2>
+                        <h1>12-13-14 Agosto 2025</h1>
+                        <p>La più grande rievocazione storica medievale della Sicilia</p>
+                        <div class="hero-buttons">
+                            <a href="registrazione.html" class="btn btn-large">Partecipa</a>
+                            <a href="https://youtu.be/fHsGc7QW3-Y?si=Azd6bF1i-HjBUH2k" class="btn btn-large btn-video" target="_blank">
+                                <i class="fas fa-play"></i> Guarda il Video
+                            </a>
+                        </div>
+                    </div>
+                    <div class="countdown-container">
+                        <div class="countdown">
+                            <h3>Mancano:</h3>
+                            <div class="countdown-items">
+                                <div class="countdown-item">
+                                    <span id="days">00</span>
+                                    <small>Giorni</small>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="hours">00</span>
+                                    <small>Ore</small>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="minutes">00</span>
+                                    <small>Minuti</small>
+                                </div>
+                                <div class="countdown-item">
+                                    <span id="seconds">00</span>
+                                    <small>Secondi</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section>
+    
+    <section class="about">
+        <div class="container">
+            <h2>La manifestazione</h2>
+            <p>Il <strong>Palio dei Normanni</strong> è una delle più importanti rievocazioni storiche del Sud Italia, che si svolge ogni anno a <strong>Piazza Armerina</strong>, in provincia di Enna, dal <strong>12 al 14 agosto</strong>. La manifestazione celebra l'ingresso trionfale del <strong>Conte Ruggero d'Altavilla</strong> nella città nel 1061, simbolo della liberazione dalla dominazione saracena.</p>
+            <p>Durante i tre giorni, la città si trasforma in un villaggio medievale animato da <strong>oltre 600 figuranti</strong> in costume, sbandieratori, musici, dame, cavalieri e popolani. Il momento clou è la <strong>Quintana del Saraceno</strong>, una gara equestre in cui i quattro quartieri storici della città (Monte, Castellina, Canali e Casalotto) si sfidano per conquistare il drappo del Palio.</p>
+            <p>Il corteo storico e le celebrazioni religiose dedicate alla Madonna delle Vittorie, patrona della città, rendono l’evento non solo uno spettacolo suggestivo, ma anche un’occasione di grande <strong>valore culturale e spirituale</strong>. Il Palio rappresenta l’orgoglio e l’identità di un’intera comunità, ed è riconosciuto come <strong>patrimonio immateriale di interesse regionale</strong>.</p>
+        </div>
+    </section>
+
+
+    <section class="curiosita">
+        <div class="container">
+            <h2>Curiosità sul Palio</h2>
+            <ul>
+                <li>Il Palio dei Normanni è stato istituito nel 1952, ma affonda le sue radici nelle celebrazioni religiose secolari in onore della Madonna delle Vittorie.</li>
+                <li>Ogni quartiere ha i propri colori, simboli araldici e un corteo dedicato.</li>
+                <li>La Quintana del Saraceno si svolge presso il campo sportivo Sant'Ippolito, trasformato per l’occasione in arena medievale.</li>
+                <li>I costumi sono realizzati artigianalmente, seguendo modelli storici documentati del XI secolo.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="quartieri">
+        <div class="container">
+            <h2>I Quartieri Storici</h2>
+            <p>Durante la manifestazione, i quattro quartieri storici di Piazza Armerina diventano protagonisti assoluti:</p>
+            <ul>
+                <li><strong>Monte:</strong> noto per la sua posizione panoramica, simbolo di forza e tradizione militare.</li>
+                <li><strong>Castellina:</strong> prende il nome dall’antico castello; rappresenta il cuore nobile della città.</li>
+                <li><strong>Canali:</strong> storicamente abitato da artigiani e commercianti, simbolo di operosità.</li>
+                <li><strong>Casalotto:</strong> il quartiere più popoloso, noto per il suo spirito combattivo e passionale.</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="info-turistiche">
+        <div class="container">
+            <h2>Info Turistiche</h2>
+            <p>Se vieni a visitare il Palio dei Normanni, ecco alcuni consigli utili:</p>
+            <ul>
+                <li><strong>Alloggio:</strong> prenota in anticipo, soprattutto nei B&B del centro storico.</li>
+                <li><strong>Parcheggio:</strong> aree attrezzate sono disponibili nelle zone limitrofe con navette gratuite.</li>
+                <li><strong>Cosa visitare:</strong> non perdere la <em>Villa Romana del Casale</em>, patrimonio UNESCO a pochi km dalla città.</li>
+                <li><strong>Gastronomia:</strong> assaggia le specialità locali come la pasta con i broccoli arriminati, le cassatelle e i cannoli.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <div class="highlight-card">
+                <h3>Corteo Storico</h3>
+                <p>Oltre 600 figuranti in costume d'epoca sfilano per le vie della città.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Gara del Palio</h3>
+                <p>I quattro quartieri si sfidano in una prova di abilità equestre.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Spettacoli</h3>
+                <p>Esibizioni di sbandieratori, musici e gruppi storici.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Palio dei Normanni - Piazza Armerina</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown 
+        function updateCountdown() {
+            const now = new Date();
+            const palioDate = new Date('August 12, 2025 00:00:00');
+            const diff = palioDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+
+</body>
+</html>

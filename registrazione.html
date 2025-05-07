@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione - Palio dei Normanni</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+        .form-section {
+            padding: 40px 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .btn {
+            background-color: #8B0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #A52A2A;
+        }
+        #registrationResult {
+            background-color: #f8f8f8;
+            padding: 30px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        #userData {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../images/logo.png" alt="Palio dei Normanni" >
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="../galleria.html">Galleria</a></li>
+                    <li class="dropdown active">
+                        <a href="monte.html">Quartiere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../monte.html">Monte mira</a></li>
+                            <li><a href="../casalotto.html">Casalotto</a></li>
+                            <li><a href="../canali.html">Canali</a></li>
+                            <li><a href="../castellina.html">Castellina</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../registrazione.html">Registrazione</a></li>
+                    <li><a href="../contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Registrazione</h1>
+                <p>Compila il form per partecipare al prossimo Palio dei Normanni</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <div class="container">
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cognome">Cognome:</label>
+                        <input type="text" id="cognome" name="cognome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quartiere">Quartiere di preferenza:</label>
+                        <select id="quartiere" name="quartiere" required>
+                            <option value="">-- Seleziona --</option>
+                            <option value="monte">Monte</option>
+                            <option value="canali">Canali</option>
+                            <option value="casalotto">Casalotto</option>
+                            <option value="castello">Castello</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ruolo">Ruolo preferito:</label>
+                        <select id="ruolo" name="ruolo" required>
+                            <option value="">-- Seleziona --</option>
+                            <option value="corteo">Partecipante al corteo</option>
+                            <option value="cavaliere">Cavaliere</option>
+                            <option value="sbandieratore">Sbandieratore</option>
+                            <option value="musico">Musico</option>
+                            <option value="volontario">Volontario</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messaggio">Messaggio:</label>
+                        <textarea id="messaggio" name="messaggio" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn">Invia Registrazione</button>
+                    </div>
+                </form>
+
+                <div id="registrationResult" class="hidden">
+                    <h2>Grazie per la tua registrazione!</h2>
+                    <div id="userData"></div>
+                    <p>Ti contatteremo al più presto con ulteriori dettagli.</p>
+                    <button id="backToForm" class="btn">Torna al form</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Palio dei Normanni - Piazza Armerina</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const registrationForm = document.getElementById('registrationForm');
+            const registrationResult = document.getElementById('registrationResult');
+            const userData = document.getElementById('userData');
+            const backToForm = document.getElementById('backToForm');
+            
+          
+            const ruoloMap = {
+                'corteo': 'Partecipante al corteo',
+                'cavaliere': 'Cavaliere',
+                'sbandieratore': 'Sbandieratore',
+                'musico': 'Musico',
+                'volontario': 'Volontario'
+            };
+            
+            
+            const quartiereMap = {
+                'monte': 'Monte',
+                'canali': 'Canali',
+                'casalotto': 'Casalotto',
+                'castello': 'Castello'
+            };
+            
+            registrationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+               
+                const formData = {
+                    nome: document.getElementById('nome').value,
+                    cognome: document.getElementById('cognome').value,
+                    email: document.getElementById('email').value,
+                    telefono: document.getElementById('telefono').value,
+                    quartiere: document.getElementById('quartiere').value,
+                    ruolo: document.getElementById('ruolo').value,
+                    messaggio: document.getElementById('messaggio').value
+                };
+                
+             
+                userData.innerHTML = `
+                    <p><strong>Nome:</strong> ${formData.nome} ${formData.cognome}</p>
+                    <p><strong>Email:</strong> ${formData.email}</p>
+                    <p><strong>Telefono:</strong> ${formData.telefono || 'Non fornito'}</p>
+                    <p><strong>Quartiere:</strong> ${quartiereMap[formData.quartiere]}</p>
+                    <p><strong>Ruolo preferito:</strong> ${ruoloMap[formData.ruolo]}</p>
+                    ${formData.messaggio ? `<p><strong>Messaggio:</strong> ${formData.messaggio}</p>` : ''}
+                `;
+                
+             
+                registrationForm.classList.add('hidden');
+                registrationResult.classList.remove('hidden');
+                
+            });
+            
+            
+            backToForm.addEventListener('click', function() {
+                registrationForm.classList.remove('hidden');
+                registrationResult.classList.add('hidden');
+                registrationForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

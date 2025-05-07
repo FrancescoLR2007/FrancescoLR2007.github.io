@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quartiere Casalotto - Palio dei Normanni</title>
+    <link rel="stylesheet" href="/style.css">
+    
+<style>
+
+
+
+.quartiere-bg {
+    background-color: rgba(139, 0, 0, 0.1);
+    border-left: 4px solid #8B0000;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.quartiere-stemma {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.quartiere-storia {
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quartiere-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.quartiere-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.quartiere-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.event-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.event-card h3 {
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.event-card i {
+    margin-right: 8px;
+    color: #DAA520;
+}
+
+@media (max-width: 768px) {
+    .quartiere-stemma {
+        max-width: 150px;
+    }
+    
+    .quartiere-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .quartiere-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.quartiere-bg{
+    background-color: rgba(231, 214, 60, 0.1);
+        border-left: 4px solid #e9e515;
+        padding: 15px;
+        margin: 20px 0;
+}
+
+    .casalotto-hero {
+        background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('/images/casalotto/casalotto-logo.jpg') no-repeat center center/cover;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .quartiere-color-casalotto {
+        color: #2ecc71; 
+    }    
+
+    .casalotto-hero h1 {
+        font-size: 3.5rem; 
+        font-weight: 700;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        margin: 0 auto;
+        max-width: 90%;
+        line-height: 1.2;
+        padding: 20px;
+        background-color: rgba(46, 204, 113, 0.7);
+        border-radius: 8px;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .casalotto-hero p {
+        font-size: 1.5rem; 
+        font-weight: 500; 
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        margin: 10px auto 0; 
+        max-width: 80%; 
+        line-height: 1.4; 
+        padding: 15px;
+        background-color: rgba(39, 174, 96, 0.7); 
+        border-radius: 6px;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+
+    .quartiere-bg-casalotto {
+        background-color: rgba(46, 204, 113, 0.1);
+        border-left: 4px solid #2ecc71;
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .event-card-casalotto {
+        border-top: 3px solid #2ecc71;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+        .casalotto-hero h1 {
+            font-size: 2.5rem;
+            padding: 15px;
+        }
+        .casalotto-hero p {
+            font-size: 1.2rem;
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .casalotto-hero h1 {
+            font-size: 2rem;
+            padding: 10px;
+        }
+        .casalotto-hero p {
+            font-size: 1rem;
+            padding: 8px;
+        }
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../images/logo.png" alt="Palio dei Normanni" >
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="../galleria.html">Galleria</a></li>
+                    <li class="dropdown active">
+                        <a href="casalotto.html">Quartiere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../monte.html">Monte mira</a></li>
+                            <li><a href="../casalotto.html">Casalotto</a></li>
+                            <li><a href="../canali.html">Canali</a></li>
+                            <li><a href="../castellina.html">Castellina</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../registrazione.html">Registrazione</a></li>
+                    <li><a href="../contatti.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="casalotto-hero">
+            <div class="container">
+                <h1>Quartiere <span class="quartiere-color-casalotto">Casalotto</span></h1>
+                <p>Verde e Bianco - Forza e Tradizione</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="quartiere-storia">
+                    <img src="../images/casalotto/stemma-casalotto.png" alt="Stemma Quartiere Casalotto" class="quartiere-stemma">
+                    
+                    <h2>La Storia del Quartiere</h2>
+                    <div class="quartiere-bg-casalotto">
+                        <p>Il Quartiere Casalotto, con i suoi colori verde e bianco, rappresenta una delle zone più vivaci e popolari di Piazza Armerina. Il suo nome deriva dalla conformazione urbanistica della zona, caratterizzata da piccoli caseggiati.</p>
+                    </div>
+                    
+                    <p>Fondato nel periodo normanno, il quartiere ha sempre mantenuto uno spirito combattivo e popolare. Il verde simboleggia la speranza e la forza della natura, mentre il bianco rappresenta la purezza delle intenzioni e lo spirito comunitario.</p>
+                    
+                    <h2>La Compagnia d'Armi</h2>
+                    <div class="quartiere-bg-casalotto">
+                        <p>La Compagnia d'Armi del Casalotto è celebre per il suo spirito agonistico e la passione che mette in ogni esibizione. I suoi cavalieri sono noti per la determinazione nelle gare, mentre gli sbandieratori si distinguono per energia e sincronia.</p>
+                    </div>
+                    
+                    <h2>Palmares</h2>
+                    <p>Il Quartiere Casalotto vanta un importante palmares nel Palio dei Normanni:</p>
+                    <ul>
+                        <li><strong>Vittorie totali:</strong> 11</li>
+                        <li><strong>Ultima vittoria:</strong> 2021</li>
+                        <li><strong>Miglior cavaliere:</strong> Marco Russo (4 vittorie)</li>
+                        <li><strong>Miglior sbandieratore:</strong> Paolo Lombardo (3 premi individuali)</li>
+                        <li><strong>Record:</strong> Miglior performance di squadra nel 2015</li>
+                    </ul>
+                    
+                    <h2>Galleria del Quartiere</h2>
+                    <div class="quartiere-gallery">
+                        <img src="../images/casalotto/corteo.jpg" alt="Corteo Storico Casalotto">
+                        <img src="../images/casalotto/cavalieri.jpg" alt="Cavaliere Casalotto">
+                        <img src="../images/casalotto/musici.jpg" alt="Sbandieratori Casalotto">
+                        <img src="../images/casalotto/cavalieri2.jpg" alt="Vittoria 2021">
+                    </div>
+                </div>
+                
+                <div class="quartiere-events">
+                    <h2>Prossimi Appuntamenti</h2>
+                    <div class="event-card event-card-casalotto">
+                        <h3>Allenamento Cavalieri</h3>
+                        <p><i class="far fa-calendar-alt"></i> Ogni mercoledì e venerdì, ore 18:00</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Campo di addestramento "Il Verziere"</p>
+                    </div>
+                    
+                    <div class="event-card event-card-casalotto">
+                        <h3>Prova Costumi</h3>
+                        <p><i class="far fa-calendar-alt"></i> 18 luglio 2025, ore 16:30</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sede del Quartiere, Via Casalotto 15</p>
+                    </div>
+                    
+                    <div class="event-card event-card-casalotto">
+                        <h3>Festa del Quartiere</h3>
+                        <p><i class="far fa-calendar-alt"></i> 1 agosto 2025, ore 20:00</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Piazza del Casalotto</p>
+                        <p>Serata con musica tradizionale e dimostrazioni</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Palio dei Normanni - Piazza Armerina</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
